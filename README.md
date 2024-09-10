@@ -46,5 +46,6 @@ Steps
 4.Access the App:
   Open your browser and go to http://localhost:5173
   License
-  This project is licensed under the MIT License. See the LICENSE file for details.
+  This project is licensed under the MIT License. See the LICENSE file for details.[MIT.License.docx](https://github.com/user-attachments/files/16942386/MIT.License.docx)
+
   
