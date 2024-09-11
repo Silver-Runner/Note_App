@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login'
-import Signup from './pages/SignUp/Signup';
+import Signup from './pages/SignUp/SignUp';
 const routes = (
   <Router>
     <Routes>
