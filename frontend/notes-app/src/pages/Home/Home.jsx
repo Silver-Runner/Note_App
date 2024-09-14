@@ -134,9 +134,9 @@ const Home = () => {
 
   return (
     <>
-    <Navbar userInfo = {userInfo} onSearchNotes={onSearchNotes} handleClearSearch={handleClearSearch}/>
+    {userInfo ? (<><Navbar userInfo = {userInfo} onSearchNotes={onSearchNotes} handleClearSearch={handleClearSearch}/>
     <div className='container mx-auto'>
-      {allNotes.length > 0 ? <div className='grid grid-cols-3 gap-4 mt-8'>
+      {allNotes.length > 0 ? <div className='grid grid-cols-1 gap-4 ml-2 mr-2 mt-8 md:grid-cols-3  '>
       {allNotes.map((item, index) => (
           <NoteCard
           key={item._id}
@@ -179,7 +179,7 @@ const Home = () => {
     <Toast isShown = {showToastMsg.isShown}
     message = {showToastMsg.message}
     type = {showToastMsg.type}
-    onClose={handleCloseToast}/>
+    onClose={handleCloseToast}/></>) : "Error"}
     </>
   )
 }

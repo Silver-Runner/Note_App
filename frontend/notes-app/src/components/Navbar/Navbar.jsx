@@ -21,15 +21,15 @@ const Navbar = ({userInfo,onSearchNotes,handleClearSearch}) => {
     handleClearSearch();
   }
   return (
-    <div className='bg-white flex items-center justify-between px-6 py-2 drop-shadow'>
+    <div className='bg-white flex items-center justify-between px-2 gap-1 py-2 drop-shadow md:justify-between md:px-6'>
       <h2 className='text-xl font-semibold text-black py-2 text '>Notes</h2>
-      <SearchBar value={searchQuery}
+      {userInfo && (<><SearchBar value={searchQuery}
       onChange={({target}) => {
         setSearchQuery(target.value);
       }}
       handleSearch={handleSearch}
       onClearSearch={onClearSearch}/>
-      <ProfileInfo userInfo={userInfo} onLogout={onLogout}/>
+      <ProfileInfo userInfo={userInfo} onLogout={onLogout}/></>)}
     </div>
   )
 }
